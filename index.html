@@ -4,49 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>TOP Filmes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end bg-dark text-white shadow-lg" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          ...
+
+        <div class="offcanvas-body d-flex flex-column gap-3">
+
+            <li class="list-unstyled">
+                <a class="btn btn-outline-light w-100 py-2" href="#cards">Produtos</a>
+            </li>
+
+            <li class="list-unstyled">
+                <a class="btn btn-outline-light w-100 py-2" href="#faq">FAQ</a>
+            </li>
+
         </div>
     </div>
 
-
-
     <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">TechWorld</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+
+                <a class="navbar-brand" href="#">TOP Filmes</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li><a class="nav-link active" href="#cards">Produtos</a></li>
-                        <li><a class="nav-link" href="#faq">FAQ</a></li>
+
+                    <!-- MENU À DIREITA -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                         <li>
-                            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalSearch">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                                 Menu
                             </button>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
+
     </header>
 
     <main>
+        <!-- modal -->
+        <div class="modal fade" id="modalSearch" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Pesquisar Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input id="inputFilme" class="form-control" type="text" placeholder="Digite o nome do filme">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="btnBuscar" class="btn btn-danger">Buscar</button>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
         <div class="container my-5">
             <h2 class="text-center">Filmes em Alta <img style="height: 50px; width: auto; vertical-align: middle;" src="https://agenciapnz.com/wp-content/uploads/Logo-Netflix.png" alt=""></h2>
             <!-- primeiro card -->
@@ -200,6 +241,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
