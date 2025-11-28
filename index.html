@@ -13,20 +13,20 @@
 
 <body>
     <!-- offcanvas -->
-    <div class="offcanvas offcanvas-end bg-dark text-white shadow-lg" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header border-bottom border-secondary">
-            <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">Menu</h5>
+    <div class="offcanvas offcanvas-end shadow-lg" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom border-secondary bg-danger ">
+            <h5 class="offcanvas-title fw-bold text-white" id="offcanvasRightLabel">Menu</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body d-flex flex-column gap-3">
 
             <li class="list-unstyled">
-                <a class="btn btn-outline-light w-100 py-2" href="#cards">Produtos</a>
+                <a class="btn btn-secondary w-100 py-2" href="#sobre"  data-bs-toggle="modal" data-bs-target="#modalSobre">Sobre</a>
             </li>
 
             <li class="list-unstyled">
-                <a class="btn btn-outline-light w-100 py-2" href="#faq">FAQ</a>
+                <a class="btn btn-secondary w-100 py-2" href="#contatos"  data-bs-toggle="modal" data-bs-target="#modalContato">Contatos</a>
             </li>
 
         </div>
@@ -66,7 +66,7 @@
     </header>
 
     <main>
-        <!-- modal -->
+        <!-- modal search -->
         <div class="modal fade" id="modalSearch" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -82,6 +82,55 @@
 
                 <div class="modal-footer">
                     <button type="button" id="btnBuscar" class="btn btn-danger">Buscar</button>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal sobre -->
+         <div class="modal fade" id="modalSobre" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sobre o site</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Site criado para facilitar a busca de filmes na internet</p>
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal contato -->
+         <div class="modal fade" id="modalContato" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contato</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <tr>
+                                <td>Email: </td>
+                                <td>lucasszanotelli@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Tel: </td>
+                                <td>(27) 9 9874-4560</td>
+                            </tr>
+                        </table>
+                    </div>
+
                 </div>
 
                 </div>
