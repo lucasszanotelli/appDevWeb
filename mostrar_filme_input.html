@@ -15,7 +15,7 @@
     const params = new URLSearchParams(window.location.search);
     const filme = params.get("filme");
 
-    fetch(`http://www.omdbapi.com/?apikey=[2e402bc6]&`)
+    fetch(`http://www.omdbapi.com/?apikey=2e402bc6&t=${encodeURIComponent(filme)}`)
         .then(response => response.json())
         .then(data => {
             if (data.Response === "False") {
